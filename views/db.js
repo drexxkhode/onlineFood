@@ -1,8 +1,9 @@
 const mysql=require("mysql2");
 const connection=mysql.createConnection({
-host: 'localhost',
-username: 'root',
-database: 'site15Food'
+Host: 'localhost',
+Username: 'root',
+Password:'',
+Database: 'site15Food'
 
 });
 connection.connect((err)=>{

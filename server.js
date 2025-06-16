@@ -1,14 +1,17 @@
 const express = require("express");
 const bodyParser= require("body-parser");
 const cors = require("cors");
-const db = require("./public/db");
+const db = require("./views/db");
 
 const app=express();
-app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
 app.use(cors());
 const PORT = 5000;
-app.use(express.static("public"));
-app.post("/login",  (res, req)=>{
+app.set('view engine', 'ejs');
+app.get('/',(req, res)=>{
+    res.render('login');
+});
+app.post("/login",  (req, res)=>{
     const {username,password}=req.body;
     query="SELECT * FROM admins WHERE username=? AND password=? LIMIT=1";
     db.query(query,[username,password],(error,results)=>{
