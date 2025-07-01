@@ -58,3 +58,5 @@ gulpfile.tmp.*
 /html-demo
 /html-starter-demo
 .env
+node_modules
+logs

@@ -2,10 +2,11 @@
   "name": "food-ordering-project",
   "version": "1.0.0",
   "description": "<p align=\"center\">    <a href=\"https://themeselection.com/products/sneat-free-bootstrap-html-admin-template/\" target=\"_blank\">       <img src=\"https://user-images.githubusercontent.com/749684/150333149-805037bc-8874-4a1f-876a-61a9683f8ef5.png\" alt=\"sneat-logo\" width=\"30px\" height=\"auto\">    </a> </p>",
-  "main": "build-config.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,15 @@
     "dotenv": "^16.5.0",
     "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "express-session": "^1.18.1",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.0",
     "mysql2": "^3.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }
